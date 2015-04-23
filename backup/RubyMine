@@ -76,12 +76,8 @@
   <action id="Editor Redo">
     <keyboard-shortcut first-keystroke="meta Y" />
   </action>
-  <action id="EditorCodeBlockEnd">
-    <keyboard-shortcut first-keystroke="meta DOWN" />
-  </action>
-  <action id="EditorCodeBlockStart">
-    <keyboard-shortcut first-keystroke="meta UP" />
-  </action>
+  <action id="EditorCodeBlockEnd" />
+  <action id="EditorCodeBlockStart" />
   <action id="EditorDeleteLine">
     <keyboard-shortcut first-keystroke="meta BACK_SPACE" />
   </action>
@@ -90,17 +86,25 @@
     <keyboard-shortcut first-keystroke="TAB" />
     <keyboard-shortcut first-keystroke="meta CLOSE_BRACKET" />
   </action>
-  <action id="EditorMoveToPageBottomWithSelection">
-    <keyboard-shortcut first-keystroke="shift meta PAGE_DOWN" />
-    <keyboard-shortcut first-keystroke="shift meta DOWN" />
-  </action>
-  <action id="EditorMoveToPageTopWithSelection">
-    <keyboard-shortcut first-keystroke="shift meta PAGE_UP" />
-    <keyboard-shortcut first-keystroke="shift meta UP" />
-  </action>
   <action id="EditorScrollDown" />
   <action id="EditorScrollUp" />
   <action id="EditorSelectWord" />
+  <action id="EditorTextEnd">
+    <keyboard-shortcut first-keystroke="meta END" />
+    <keyboard-shortcut first-keystroke="meta DOWN" />
+  </action>
+  <action id="EditorTextEndWithSelection">
+    <keyboard-shortcut first-keystroke="shift meta END" />
+    <keyboard-shortcut first-keystroke="shift meta DOWN" />
+  </action>
+  <action id="EditorTextStart">
+    <keyboard-shortcut first-keystroke="meta HOME" />
+    <keyboard-shortcut first-keystroke="meta UP" />
+  </action>
+  <action id="EditorTextStartWithSelection">
+    <keyboard-shortcut first-keystroke="shift meta HOME" />
+    <keyboard-shortcut first-keystroke="shift meta UP" />
+  </action>
   <action id="EditorUnSelectWord" />
   <action id="EditorUnindentSelection">
     <keyboard-shortcut first-keystroke="shift TAB" />
