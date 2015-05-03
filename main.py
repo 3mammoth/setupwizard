@@ -7,56 +7,56 @@ import sys
 import re
 
 from freshinstall_util import *
-from shell_util import installShellScripts
+from shell_util import install_shell_scripts
 
 
-def checkArgs(args):
+def check_args(args):
     if len(args) > 3 or len(args) < 2:
         print "Argument length too long or short"
         print USAGE_STRING
         return None
 
-    type = args[1]
-    if type != 'shell' and type != 'backup' and type != 'restore':
+    program_type = args[1]
+    if program_type != 'shell' and program_type != 'backup' and program_type != 'restore':
         print "Operation not valid"
         print USAGE_STRING
         return None
 
     if len(args) == 2:
-        return type, allPrograms
+        return program_type, all_programs
 
-    optionsPattern = re.compile("^\-[a-z]+$")
-    if optionsPattern.match(args[2]) is None:
+    options_pattern = re.compile("^\-[a-z]+$")
+    if options_pattern.match(args[2]) is None:
         print "Option format incorrect"
         print USAGE_STRING
         return None
 
-    selectedPrograms = []
+    selected_programs = []
     for char in args[2][1:]:
-        for program in allPrograms:
+        for program in all_programs:
             if program.commandLineOption == char:
-                selectedPrograms.append(program)
+                selected_programs.append(program)
 
-    if len(selectedPrograms) == 0:
+    if len(selected_programs) == 0:
         print "Program not recognized"
         print USAGE_STRING
         return None
 
-    return type, selectedPrograms
+    return program_type, selected_programs
 
 
 def main():
-    (type, selectedPrograms) = checkArgs(sys.argv)
-    if type == 'shell':
-        installShellScripts()
-    elif type == 'fresh_install':
-        setupAllProgramsAndShortcutsForNewLaptop()
+    (program_type, selected_programs) = check_args(sys.argv)
+    if program_type == 'shell':
+        install_shell_scripts()
+    elif program_type == 'fresh_install':
+        setup_all_programs_and_shortcuts_for_new_laptop()
     else:
-        for program in selectedPrograms:
-            if type == 'backup':
-                backupShortcuts(program)
-            elif type == 'restore':
-                restoreShortcuts(program)
+        for program in selected_programs:
+            if program_type == 'backup':
+                backup_shortcuts(program)
+            elif program_type == 'restore':
+                restore_shortcuts(program)
 
 
 main()

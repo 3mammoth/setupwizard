@@ -3,17 +3,17 @@ from utils import *
 
 
 class Program():
-    def __init__(self, commandLineOption, appName, keyMapLocation):
-        self.commandLineOption = commandLineOption
+    def __init__(self, command_line_option, app_name, key_map_location):
+        self.commandLineOption = command_line_option
         # which package should in ~/Library/Appliation Support we look into?
-        self.appName = appName
+        self.appName = app_name
         # where is the key mapping file
-        self.keyMapLocation = keyMapLocation
+        self.keyMapLocation = key_map_location
 
-    def getAppDirectory(self):
+    def get_app_directory(self):
         return "/Applications/" + self.appName + ".app"
 
-    def getShortcutBackupLocation(self):
+    def get_shortcut_backup_location(self):
         return BACKUP_FOLDER + "/" + self.appName
 
 
@@ -41,7 +41,7 @@ RubyMine = Program("r", "RubyMine", os.path.expanduser("~") + "/Library/Preferen
 PyCharm = Program("c", "PyCharm", os.path.expanduser("~") + "/Library/Preferences/PyCharm40/keymaps/Ray.xml")
 Bash = Program("b", "Bash", os.path.expanduser("~") + "/.bash_profile")
 
-allPrograms = [Sublime_Key, Xcode, IntelliJ, RubyMine, Bash, PyCharm]
+all_programs = [Sublime_Key, Xcode, IntelliJ, RubyMine, Bash, PyCharm]
 
-# Appliations not listed under the /Applications folder
-allSpecialPrograms = [Bash.appName]
+# Applications not listed under the /Applications folder
+all_special_programs = [Bash.appName]

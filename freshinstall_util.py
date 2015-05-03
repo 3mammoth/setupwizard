@@ -4,7 +4,7 @@ from shortcut_util import *
 from program import *
 
 
-def setupAllProgramsAndShortcutsForNewLaptop():
+def setup_all_programs_and_shortcuts_for_new_laptop():
     # Download Dropbox, Chrome, iTerm, and Sublime first
     # Load iTerm profile
     # call(["ln", "-s", "subl", "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"])
@@ -18,5 +18,5 @@ def setupAllProgramsAndShortcutsForNewLaptop():
     # alias gd='git diff'
     # alias gsh='git stash'
     # alias gr='git rebase -i'
-    for program in allPrograms:
-        restoreShortcuts(program)
+    for program in all_programs:
+        restore_shortcuts(program)

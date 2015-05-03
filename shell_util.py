@@ -1,9 +1,12 @@
-def installShellScripts():
-    echoPath = "export PATH=\"$PATH:~/Dropbox/Programming/scripts/\""
-    profileFile = open(os.path.expanduser("~") + "/.profile", "a+")
-    profileFileRead = open(os.path.expanduser("~") + "/.profile", "r")
-    if echoPath not in profileFileRead.read().rstrip('\n'):
-        profileFile.write("\n" + echoPath)
+import os
+
+
+def install_shell_scripts():
+    echo_path = "export PATH=\"$PATH:~/Dropbox/Programming/scripts/\""
+    profile_file = open(os.path.expanduser("~") + "/.profile", "a+")
+    profile_file_read = open(os.path.expanduser("~") + "/.profile", "r")
+    if echo_path not in profile_file_read.read().rstrip('\n'):
+        profile_file.write("\n" + echo_path)
 
 # def _usrbinPath(scriptName):
 #     return "/usr/bin/" + scriptName
