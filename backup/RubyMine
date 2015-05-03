@@ -1,4 +1,4 @@
-<keymap version="1" name="Ray Keymap" parent="Mac OS X">
+<keymap version="1" name="Ray" parent="Mac OS X">
   <action id="$Cut">
     <keyboard-shortcut first-keystroke="meta X" />
   </action>
@@ -6,7 +6,9 @@
     <keyboard-shortcut first-keystroke="meta Y" />
   </action>
   <action id="ActivateChangesToolWindow" />
-  <action id="ActivateDebugToolWindow" />
+  <action id="ActivateDebugToolWindow">
+    <keyboard-shortcut first-keystroke="control 4" />
+  </action>
   <action id="ActivateFavoritesToolWindow" />
   <action id="ActivateFindToolWindow">
     <keyboard-shortcut first-keystroke="control 1" />
@@ -16,7 +18,9 @@
   <action id="ActivateProjectToolWindow">
     <keyboard-shortcut first-keystroke="control 2" />
   </action>
-  <action id="ActivateRunToolWindow" />
+  <action id="ActivateRunToolWindow">
+    <keyboard-shortcut first-keystroke="control 3" />
+  </action>
   <action id="ActivateStructureToolWindow" />
   <action id="ActivateTODOToolWindow" />
   <action id="Annotate">
@@ -152,11 +156,9 @@
     <keyboard-shortcut first-keystroke="meta 2" />
   </action>
   <action id="GotoBookmark3">
-    <keyboard-shortcut first-keystroke="control 3" />
     <keyboard-shortcut first-keystroke="meta 3" />
   </action>
   <action id="GotoBookmark4">
-    <keyboard-shortcut first-keystroke="control 4" />
     <keyboard-shortcut first-keystroke="meta 4" />
   </action>
   <action id="GotoBookmark5">
@@ -202,6 +204,11 @@
   </action>
   <action id="GotoPreviousBookmark">
     <keyboard-shortcut first-keystroke="shift alt TAB" />
+  </action>
+  <action id="GotoRelated">
+    <keyboard-shortcut first-keystroke="meta alt HOME" />
+    <keyboard-shortcut first-keystroke="shift alt N" />
+    <keyboard-shortcut first-keystroke="shift meta G" />
   </action>
   <action id="GotoSuperMethod" />
   <action id="GotoSymbol">

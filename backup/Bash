@@ -8,6 +8,13 @@ export GREP_COLOR='1;32'
 export CLICOLOR='1'
 
 alias ls='ls -G'  # OS-X SPECIFIC - the -G command in OS-X is for colors, in Linux it's no groups
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gsh='git stash'
+alias gr='git rebase -i'
 export LSCOLORS="gxDxFxdxCxExExhbadgxgx"
 
 # Setup some colors to use later in interactive shell or scripts
@@ -64,8 +71,11 @@ export PS4='+ '
 
 source ~/.git-prompt.sh
 # Load local bash settings
+source ~/.profile
 
 [[ -f "$HOME/.bash_local" ]] && source "$HOME/.bash_local"
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
