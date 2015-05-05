@@ -1,6 +1,6 @@
 from subprocess import call
+
 from program import *
-import os
 
 
 def backup_shortcuts(program):

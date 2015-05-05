@@ -9,7 +9,7 @@ def install_shell_scripts():
         profile_file.write("\n" + echo_path)
 
 # def _usrbinPath(scriptName):
-#     return "/usr/bin/" + scriptName
+# return "/usr/bin/" + scriptName
 
 #   def _dropboxPath(scriptName):
 #     return os.path.expanduser("~") + "/Dropbox/Programming/scripts/" + scriptName

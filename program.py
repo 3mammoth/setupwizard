@@ -1,4 +1,3 @@
-import os
 from utils import *
 
 
@@ -22,7 +21,7 @@ Sublime_Key = Program("s", "Sublime Text 2", os.path.expanduser(
 
 # TODO
 # Sublime_Setting = Program("s", "Sublime Text 2", \
-#   os.path.expanduser("~") + \
+# os.path.expanduser("~") + \
 #   "/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap")
 
 # iTerm currently dysfunctional
@@ -38,7 +37,7 @@ Xcode = Program("x", "Xcode",
 IntelliJ = Program("i", "IntelliJ IDEA 13",
                    os.path.expanduser("~") + "/Library/Preferences/IntelliJIdea13/keymaps/Ray.xml")
 RubyMine = Program("r", "RubyMine", os.path.expanduser("~") + "/Library/Preferences/RubyMine70/keymaps/Ray.xml")
-PyCharm = Program("c", "PyCharm", os.path.expanduser("~") + "/Library/Preferences/PyCharm40/keymaps/Ray.xml")
+PyCharm = Program("p", "PyCharm CE", os.path.expanduser("~") + "/Library/Preferences/PyCharm40/keymaps/Ray.xml")
 Bash = Program("b", "Bash", os.path.expanduser("~") + "/.bash_profile")
 
 all_programs = [Sublime_Key, Xcode, IntelliJ, RubyMine, Bash, PyCharm]
