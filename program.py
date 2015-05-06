@@ -34,8 +34,8 @@ Sublime_Key = Program("s", "Sublime Text 2", os.path.expanduser(
 
 Xcode = Program("x", "Xcode",
                 os.path.expanduser("~") + "/Library/Developer/Xcode/UserData/KeyBindings/Ray.idekeybindings")
-IntelliJ = Program("i", "IntelliJ IDEA 13",
-                   os.path.expanduser("~") + "/Library/Preferences/IntelliJIdea13/keymaps/Ray.xml")
+IntelliJ = Program("i", "IntelliJ IDEA 14 CE",
+                   os.path.expanduser("~") + "/Library/Preferences/IdeaIC14/keymaps/Ray.xml")
 RubyMine = Program("r", "RubyMine", os.path.expanduser("~") + "/Library/Preferences/RubyMine70/keymaps/Ray.xml")
 PyCharm = Program("p", "PyCharm CE", os.path.expanduser("~") + "/Library/Preferences/PyCharm40/keymaps/Ray.xml")
 Bash = Program("b", "Bash", os.path.expanduser("~") + "/.bash_profile")
