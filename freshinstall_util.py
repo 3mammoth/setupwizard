@@ -5,17 +5,10 @@ from program import *
 
 
 def setup_all_programs_and_shortcuts_for_new_laptop():
-    # Download Dropbox, Chrome, iTerm, and Sublime first
+    # Download Dropbox, Chrome, iTerm, git, Sublime as well as optionally IntelliJ, PyCharm, and RubyMine first
     # Load iTerm profile
     # ln -s subl "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
-    # git config --global core.editor "subl -n -w"
-    # ln -s subl "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
-    # alias gs='git status '
-    # alias ga='git add '
-    # alias gb='git branch '
-    # alias gc='git commit'
-    # alias gd='git diff'
-    # alias gsh='git stash'
-    # alias gr='git rebase -i'
+    # git config --global core.editor "subl -n -w" currently not needed since it's in Git config which we will restore
+    # Set copy file path here http://www.cnet.com/how-to/how-to-copy-a-file-path-in-os-x/
     for program in all_programs:
         restore_shortcuts(program)

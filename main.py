@@ -25,38 +25,35 @@ def check_args(args):
     if len(args) == 2:
         return program_type, all_programs
 
-    options_pattern = re.compile("^\-[a-z]+$")
+    options_pattern = re.compile("^\-[a-z0-9]+$")
     if options_pattern.match(args[2]) is None:
         print "Option format incorrect"
         print USAGE_STRING
         return None
 
-    selected_programs = []
-    for char in args[2][1:]:
-        for program in all_programs:
-            if program.commandLineOption == char:
-                selected_programs.append(program)
+    selected_program = None
+    for program in all_programs:
+        if program.commandLineOption == args[2][1:]:
+            selected_program = program
 
-    if len(selected_programs) == 0:
+    if selected_program is None:
         print "Program not recognized"
         print USAGE_STRING
         return None
 
-    return program_type, selected_programs
+    return program_type, selected_program
 
 
 def main():
-    (program_type, selected_programs) = check_args(sys.argv)
+    (program_type, program) = check_args(sys.argv)
     if program_type == 'shell':
         install_shell_scripts()
     elif program_type == 'fresh_install':
         setup_all_programs_and_shortcuts_for_new_laptop()
-    else:
-        for program in selected_programs:
-            if program_type == 'backup':
-                backup_shortcuts(program)
-            elif program_type == 'restore':
-                restore_shortcuts(program)
+    elif program_type == 'backup':
+        backup_shortcuts(program)
+    elif program_type == 'restore':
+        restore_shortcuts(program)
 
 
 main()
